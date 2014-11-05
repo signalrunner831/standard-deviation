@@ -33,6 +33,7 @@ def stdDevOfLengths(L):
     return stdDev
 
     # using listcomps
+
 def stdDevOfLengths2(L):
     n = float(len(L))
     if (n == 0):
@@ -44,12 +45,14 @@ def stdDevOfLengths2(L):
     return variance**(.5)
 
     # using a separate function for std dev from lecture video
+
 def stdDev(X):
     mean = sum(X) / float(len(X))
     tot = 0.0
     for x in X:
         tot += (x - mean)**2
     return (tot/len(X))**0.5
+
 
 def stdDevOfLengths3(L):
     n = len(L)
