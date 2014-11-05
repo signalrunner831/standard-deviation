@@ -4,12 +4,13 @@ standard-deviation
 4 functions for standard deviation
 
 def stdDevOfLengths(L):
+
     """
     L: a list of strings
-
     returns: float, the standard deviation of the lengths of the strings,
       or NaN if L is empty.
     """
+    
     if (len(L) == 0):
         return float('NaN')
     
@@ -20,17 +21,18 @@ def stdDevOfLengths(L):
     meanVals = sumVals / float(len(L))
 
     # compute variance (average squared deviation from mean)
+    
     sumDevSquared = 0
     for s in L:
         sumDevSquared += (len(s) - meanVals)**2
     variance = sumDevSquared / float(len(L))
 
     # standard deviation is the square root of the variance
+    
     stdDev = variance**(.5)
-
     return stdDev
 
-# using listcomps
+    # using listcomps
 def stdDevOfLengths2(L):
     n = float(len(L))
     if (n == 0):
@@ -41,8 +43,7 @@ def stdDevOfLengths2(L):
     variance   = sum(squaredDev) / n    
     return variance**(.5)
 
-
-# using a separate function for std dev from lecture video
+    # using a separate function for std dev from lecture video
 def stdDev(X):
     mean = sum(X) / float(len(X))
     tot = 0.0
